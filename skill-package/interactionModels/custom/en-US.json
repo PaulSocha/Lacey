@@ -1,0 +1,73 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "change me",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "IntentHandler",
+                    "slots": [
+                        {
+                            "name": "IntentSlot",
+                            "type": "IntentSlotValues"
+                        }
+                    ],
+                    "samples": [
+                        "Is there {IntentSlot}",
+                        "Are you {IntentSlot}",
+                        "what are {IntentSlot}",
+                        "{IntentSlot}",
+                        "what is {IntentSlot}",
+                        "please tell me more about {IntentSlot}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "IntentSlotValues",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "test 2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "baseball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "golf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "test"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

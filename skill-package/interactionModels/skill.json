@@ -3,14 +3,14 @@
       "publishingInformation": {
         "locales": {
           "en-US": {
-            "summary": "",
+            "summary": "Alexa Skill that using AWS services and new alexa features.",
             "examplePhrases": [
-              "",
-              "",
-              ""
+              "Alexa open Lacey",
+              "Alexa start Lacey",
+              "Alexa open Lacey"
             ],
-            "name": "",
-            "description": "",
+            "name": "Lacey",
+            "description": "Alexa Skill that using AWS services and new alexa features.",
             "smallIconUri": "",
             "largeIconUri": ""
           }
