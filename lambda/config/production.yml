@@ -1,0 +1,7 @@
+NAME: 'lacey'
+STAGE: 'production'
+CLIENT_ID : ''
+CLIENT_SECRET : ''
+CALLBACK_URL : 'http://localhost:3000'
+SKILL_ID: ''
+ENDPOINT_URI: 'ask-custom-lacey-production'

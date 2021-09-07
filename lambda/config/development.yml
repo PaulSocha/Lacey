@@ -1,0 +1,6 @@
+NAME: 'lacey-dev'
+STAGE: 'development'
+CLIENT_ID : ''
+CLIENT_SECRET : ''
+CALLBACK_URL : 'http://localhost:3000'
+ENDPOINT_URI: 'ask-custom-lacey-skill-development'

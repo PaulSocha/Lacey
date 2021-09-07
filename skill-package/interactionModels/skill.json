@@ -1,0 +1,65 @@
+{
+    "manifest": {
+      "publishingInformation": {
+        "locales": {
+          "en-US": {
+            "summary": "",
+            "examplePhrases": [
+              "",
+              "",
+              ""
+            ],
+            "name": "",
+            "description": "",
+            "smallIconUri": "",
+            "largeIconUri": ""
+          }
+        },
+        "isAvailableWorldwide": false,
+        "testingInstructions": "",
+        "category": "",
+        "distributionMode": "PUBLIC",
+        "distributionCountries": [
+          "US"
+        ]
+      },
+      "apis": {
+        "custom": {
+          "endpoint": {
+            "sourceDir": "lambda/custom/dist",
+            "uri": ""
+          },
+          "interfaces": [
+          ]
+        }
+      },
+      "events": {
+        "endpoint": {
+          "uri": ""
+        },
+        "subscriptions": [
+          {
+            "eventName": "SKILL_DISABLED"
+          }
+        ]
+      },
+      "manifestVersion": "3.0",
+      "privacyAndCompliance": {
+        "allowsPurchases": false,
+        "locales": {
+          "en-US": {
+            "privacyPolicyUrl": ""
+          }
+        },
+        "usesPersonalInfo": true,
+        "isChildDirected": false,
+        "isExportCompliant": true,
+        "containsAds": false
+      },
+      "permissions": [
+        {
+          "name": "alexa::alerts:reminders:skill:readwrite"
+        }
+      ]
+    }
+  }
