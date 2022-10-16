@@ -1,11 +1,13 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "change me",
+            "invocationName": "the surveyor",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
-                    "samples": []
+                    "samples": [
+                        "cancel survey"
+                    ]
                 },
                 {
                     "name": "AMAZON.HelpIntent",
@@ -13,7 +15,15 @@
                 },
                 {
                     "name": "AMAZON.StopIntent",
-                    "samples": []
+                    "samples": [
+                        "please stop survey",
+                        "im done",
+                        "no I'm done",
+                        "no stop survey",
+                        "no that's it",
+                        "stop",
+                        "no I am done"
+                    ]
                 },
                 {
                     "name": "AMAZON.NavigateHomeIntent",
@@ -24,50 +34,239 @@
                     "samples": []
                 },
                 {
-                    "name": "IntentHandler",
+                    "name": "SurveyIntent",
                     "slots": [
                         {
-                            "name": "IntentSlot",
-                            "type": "IntentSlotValues"
+                            "name": "QuestionOne",
+                            "type": "YesNoType",
+                            "samples": [
+                                "{QuestionOne}"
+                            ]
+                        },
+                        {
+                            "name": "QuestionTwo",
+                            "type": "YesNoType",
+                            "samples": [
+                                "{QuestionTwo}"
+                            ]
+                        },
+                        {
+                            "name": "QuestionThree",
+                            "type": "RatingType",
+                            "samples": [
+                                "{QuestionThree}"
+                            ]
+                        },
+                        {
+                            "name": "QuestionFour",
+                            "type": "YesNoType",
+                            "samples": [
+                                "{QuestionFour}"
+                            ]
+                        },
+                        {
+                            "name": "QuestionFive",
+                            "type": "RatingType",
+                            "samples": [
+                                "{QuestionFive}"
+                            ]
                         }
                     ],
                     "samples": [
-                        "Is there {IntentSlot}",
-                        "Are you {IntentSlot}",
-                        "what are {IntentSlot}",
-                        "{IntentSlot}",
-                        "what is {IntentSlot}",
-                        "please tell me more about {IntentSlot}"
+                        "yes I want to start",
+                        "yeah yes",
+                        "yeah start",
+                        "yeah i want to start",
+                        "yes i would like to start ",
+                        "yep i would like to start",
+                        "lets start",
+                        "yep lets start",
+                        "yes begin",
+                        "yes begin survey",
+                        "yes start",
+                        "yes please start",
+                        "sure start survey",
+                        "yes start survey",
+                        "start survey now",
+                        "survey start now",
+                        "start my survey today",
+                        "please survey",
+                        "please starty survey",
+                        "start my survey",
+                        "survey start",
+                        "project survey ",
+                        "Start the survey",
+                        "Survey",
+                        "Start Survey"
                     ]
                 }
             ],
             "types": [
                 {
-                    "name": "IntentSlotValues",
+                    "name": "RatingType",
                     "values": [
                         {
                             "name": {
-                                "value": "test 2"
+                                "value": "Five",
+                                "synonyms": [
+                                    "5"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "baseball"
+                                "value": "Four",
+                                "synonyms": [
+                                    "4"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "golf"
+                                "value": "Three",
+                                "synonyms": [
+                                    "3"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "test"
+                                "value": "One",
+                                "synonyms": [
+                                    "1"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Two",
+                                "synonyms": [
+                                    "2"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "YesNoType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "No"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yes"
                             }
                         }
                     ]
                 }
             ]
-        }
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SurveyIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "QuestionOne",
+                            "type": "YesNoType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1608139732906.1073475779154"
+                            }
+                        },
+                        {
+                            "name": "QuestionTwo",
+                            "type": "YesNoType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1608139732906.878785011594"
+                            }
+                        },
+                        {
+                            "name": "QuestionThree",
+                            "type": "RatingType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1608139732906.424914938972"
+                            }
+                        },
+                        {
+                            "name": "QuestionFour",
+                            "type": "YesNoType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1608139732906.1484628258853"
+                            }
+                        },
+                        {
+                            "name": "QuestionFive",
+                            "type": "RatingType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1608139732906.695380318983"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1608139732906.1073475779154",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Question One. Yes or No. Are you feeling okay today?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1608139732906.878785011594",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Question Two. Yes or No. Are you showing any covid nineteen symptoms today?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1608139732906.424914938972",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Question Three. Rating one through five. One being very poor and five being very good. How is your breathing?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1608139732906.1484628258853",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Question Four. Yes or No. Have you gotten you sense of smell and taste back?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1608139732906.695380318983",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Question Five, Rating one through five. One is very poor and five is very good. How is your mobility today?"
+                    }
+                ]
+            }
+        ]
     }
 }

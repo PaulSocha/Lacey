@@ -3,14 +3,14 @@
       "publishingInformation": {
         "locales": {
           "en-US": {
-            "summary": "Alexa Skill that using AWS services and new alexa features.",
+            "summary": "DEMO skill that will ask a question and save the answer in a database table.",
             "examplePhrases": [
-              "Alexa open Lacey",
-              "Alexa start Lacey",
-              "Alexa open Lacey"
+              "Alexa open the surveyor",
+              "Alexa start the surveyor",
+              "Alexa begin the surveyor"
             ],
-            "name": "Lacey",
-            "description": "Alexa Skill that using AWS services and new alexa features.",
+            "name": "the surveyor",
+            "description": "DEMO skill that will ask a question and save the answer in a database table.",
             "smallIconUri": "",
             "largeIconUri": ""
           }

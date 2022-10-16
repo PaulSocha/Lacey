@@ -1,12 +1,12 @@
 service:
-  name: kumu-skill
+  name: Surveyor
 plugins:
   - serverless-webpack
   - serverless-alexa-skills
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   stage: ${opt:stage, 'development'}
   environment:
     CLIENT_SECRET: ${file(./config/${self:provider.stage}.yml):CLIENT_SECRET}

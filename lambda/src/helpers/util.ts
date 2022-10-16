@@ -45,11 +45,6 @@ export function CreateError(message: string, name: string): Error {
     return error;
 }
 
-export function SupportsAPL(handlerInput: HandlerInput): boolean {
-    const supportedInterfaces = handlerInput.requestEnvelope.context.System.device!.supportedInterfaces;
-    const aplInterface = supportedInterfaces['Alexa.Presentation.APL'];
-    return aplInterface !== undefined;
-}
 
 export function ElicitSlotResponse(slotName: string, handlerInput: HandlerInput, speech: string, repromptSpeech: string): Response {
     const responseBuilder = handlerInput.responseBuilder;
