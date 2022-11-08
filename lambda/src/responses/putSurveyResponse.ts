@@ -20,6 +20,7 @@ export async function PutSurveyResponse(handlerInput: HandlerInput, string: stri
     }
     console.log('This is the array of completed answers', completedAnswer);
     
+//need to have the variables inorder for dynamodb tabel. 
     const responseQ1 = completedAnswer[3].toString();
     const reposneQ2 = completedAnswer[5].toString();
     const responseQ3 = completedAnswer[7].toString();
